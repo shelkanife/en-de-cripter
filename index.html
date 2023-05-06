@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Challenge ONE - Encriptador</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <button class="menu" id="menu">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+        <img src="./assets/logo.png" class="logo" />
+      </header>
+      <div class="text-wrapper">
+        <textarea placeholder="Ingrese el texto aquí" autofocus></textarea>
+        <section class="action">
+          <div class="info-wrapper">
+            <img src="./assets/info-icon.png" class="icon" />
+            <span>Sólo letras minúsculas y sin acento</span>
+          </div>
+          <div class="btns-wrapper">
+            <button id="encrypt" class="colored">Encriptar</button>
+            <button
+              style="background-color: inherit"
+              id="decrypt"
+              class="bordered"
+            >
+              Desencriptar
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+    <aside>
+      <div class="card">
+        <div id="card">
+          <img src="./assets/empty.png" id="empty" />
+          <h3>Ningún mensaje fue encontrado</h3>
+          <span>Ingresa el texto que deseas encriptar o desencriptar</span>
+        </div>
+        <pre id="processedText" style="text-align: left" tabindex="-1"></pre>
+        <button
+          style="background-color: inherit"
+          class="bordered hidden"
+          id="copy"
+        >
+          Copiar
+        </button>
+      </div>
+
+      <!-- <button>Copiar</button> -->
+    </aside>
+    <span id="toast" class="toast">Texto copiado</span>
+    <div class="menu-wrapper" id="menu-wrapper"></div>
+    <section id="options" class="options">
+      <h1>Opciones</h1>
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        "
+      >
+        <span> Tema </span>
+        <button id="theme"></button>
+      </div>
+      <div id="opt-info">
+        <p><span>Creado por: </span>David Cortés</p>
+        <div class="icons">
+          <a
+            href="https://www.linkedin.com/in/david-cortes-a49583259/"
+            target="_blank"
+          >
+            <img src="./assets/linkedin.png" />
+          </a>
+          <a href="https://github.com/shelkanife" target="_blank">
+            <img src="./assets/github.png" class="invert" />
+          </a>
+        </div>
+        <button class="colored" id="close">Cerrar</button>
+      </div>
+    </section>
+    <div class="alert-wrapper hidden" id="alert-wrapper">
+      <div class="info-card">
+        <h1 id="card-title">¡¡¡Error!!!</h1>
+        <p id="card-info"></p>
+        <button
+          style="background-color: inherit"
+          class="bordered"
+          onclick="hide()"
+        >
+          Aceptar
+        </button>
+      </div>
+    </div>
+    <script src="./js/helpers.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
